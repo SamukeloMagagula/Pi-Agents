@@ -1,0 +1,8 @@
+[
+  {"Variable_name": "Aborted_connects", "Value": "3"},
+  {"Variable_name": "Questions", "Value": "123456"},
+  {"Variable_name": "Slow_queries", "Value": "7"},
+  {"Variable_name": "Threads_connected", "Value": "38"},
+  {"Variable_name": "Threads_running", "Value": "2"},
+  {"Variable_name": "Uptime", "Value": "86400"}
+]

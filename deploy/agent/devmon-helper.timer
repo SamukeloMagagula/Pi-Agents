@@ -1,0 +1,10 @@
+[Unit]
+Description=Run the devmon security helper hourly
+
+[Timer]
+OnBootSec=2min
+OnUnitActiveSec=1h
+RandomizedDelaySec=2min
+
+[Install]
+WantedBy=timers.target

@@ -1,0 +1,7 @@
+[
+  {"Id": 11, "User": "app", "Host": "10.0.0.9:51234", "db": "shop", "Command": "Query", "Time": 75, "State": "Sending data", "Info": "SELECT * FROM orders WHERE note LIKE '%x%'", "Progress": 0.0},
+  {"Id": 12, "User": "app", "Host": "10.0.0.9:51240", "db": "shop", "Command": "Sleep", "Time": 500, "State": "", "Info": null, "Progress": 0.0},
+  {"Id": 13, "User": "dbmonitor", "Host": "localhost", "db": null, "Command": "Query", "Time": 0, "State": "starting", "Info": "SHOW FULL PROCESSLIST", "Progress": 0.0},
+  {"Id": 14, "User": "system user", "Host": "", "db": null, "Command": "Daemon", "Time": 9000, "State": "InnoDB purge coordinator", "Info": null, "Progress": 0.0},
+  {"Id": 15, "User": "report", "Host": "10.0.0.7:40000", "db": "shop", "Command": "Query", "Time": 320, "State": "Copying to tmp table", "Info": "SELECT 1", "Progress": 0.0}
+]

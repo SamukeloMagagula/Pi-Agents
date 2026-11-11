@@ -1,0 +1,19 @@
+[Unit]
+Description=devmon monitoring agent
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+User=devmon
+Group=devmon
+ExecStart=/opt/devmon/venv/bin/python -m devmon.agent --config /etc/devmon/agent.ini
+Restart=always
+RestartSec=5
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+ReadWritePaths=/var/lib/devmon
+
+[Install]
+WantedBy=multi-user.target

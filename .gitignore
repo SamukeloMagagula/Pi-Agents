@@ -1,0 +1,17 @@
+# Secrets and local state
+*.ini
+!*.example.ini
+*.key
+data/
+config.php
+.env
+*.log
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Tooling scratch
+.superpowers/
+.pytest_cache/

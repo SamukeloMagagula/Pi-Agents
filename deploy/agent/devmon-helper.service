@@ -1,0 +1,16 @@
+[Unit]
+Description=devmon security helper (the agent's few root-only checks)
+After=network-online.target
+
+[Service]
+Type=oneshot
+# -I: ignore the working directory, PYTHONPATH and user site-packages. /opt/devmon is
+# root-owned, so nothing the unprivileged agent can write is ever run as root.
+ExecStart=/opt/devmon/venv/bin/python -I -m devmon.agent.helper --out /var/lib/devmon-helper/status.json
+Nice=10
+IOSchedulingClass=idle
+TimeoutStartSec=10min
+NoNewPrivileges=yes
+ProtectSystem=full
+ProtectHome=yes
+PrivateTmp=yes

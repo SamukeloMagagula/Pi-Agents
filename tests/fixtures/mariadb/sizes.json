@@ -1,0 +1,6 @@
+[
+  {"db_name": "shop", "table_count": 12, "size_bytes": 52428800, "approx_rows": 120000},
+  {"db_name": "wiki", "table_count": 40, "size_bytes": 10485760, "approx_rows": null},
+  {"db_name": "mysql", "table_count": 31, "size_bytes": 2097152, "approx_rows": 900},
+  {"db_name": "scratch", "table_count": 1, "size_bytes": 16384, "approx_rows": 0}
+]

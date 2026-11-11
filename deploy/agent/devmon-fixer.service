@@ -1,0 +1,19 @@
+[Unit]
+Description=devmon fixer (self-healing actions the hub asks for; root)
+After=network-online.target
+Before=devmon-agent.service
+
+[Service]
+# -I: ignore the working directory, PYTHONPATH and user site-packages. /opt/devmon is
+# root-owned, so nothing the unprivileged agent can write is ever run as root.
+ExecStart=/opt/devmon/venv/bin/python -I -m devmon.agent.fixer --config /etc/devmon/fixer.ini
+Restart=always
+RestartSec=5
+NoNewPrivileges=yes
+ProtectHome=yes
+# Not ProtectSystem=strict or PrivateTmp: the actions write the journal, the apt cache,
+# /proc/sys/vm, the CPU governors and old files in /tmp, and talk to systemd.
+ProtectSystem=full
+
+[Install]
+WantedBy=multi-user.target
