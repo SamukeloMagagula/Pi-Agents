@@ -1,0 +1,10 @@
+[project]
+name = "pi-agents"
+version = "0.1.0"
+description = "WindPulse monitoring agent and node defences"
+requires-python = ">=3.9"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src", "tests"]
+addopts = "--import-mode=importlib"
